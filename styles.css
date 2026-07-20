@@ -9,6 +9,9 @@
   --purple: #9500ff;
   --purple-2: #b532ff;
   --blue: #0055ff;
+  --light-lavender: #d1c8da;
+  --light-lavender-deep: #b8adc4;
+  --light-lavender-soft: #d8d1df;
   --radius: 24px;
   --shadow: 0 24px 80px rgba(0, 0, 0, .34);
 }
@@ -72,6 +75,7 @@ svg { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: 
 .hero h1 { margin: 26px 0 24px; max-width: 670px; font-size: clamp(64px, 7vw, 104px); line-height: .91; letter-spacing: -.065em; }
 h1 em, h2 em { font-style: normal; color: transparent; background: linear-gradient(90deg, #c75cff 0%, #9500ff 43%, #4e72ff 100%); -webkit-background-clip: text; background-clip: text; }
 .hero-lead { max-width: 620px; margin: 0 0 30px; color: rgba(255,255,255,.72); font-size: 18px; line-height: 1.65; }
+.mobile-hero-visual { display: none; }
 .hero-offer { display: flex; align-items: center; gap: 26px; margin-bottom: 25px; }
 .hero-offer > div:first-child { display: flex; align-items: baseline; gap: 12px; }
 .price { font-size: 56px; font-weight: 800; line-height: 1; letter-spacing: -.05em; }
@@ -111,10 +115,11 @@ h1 em, h2 em { font-style: normal; color: transparent; background: linear-gradie
 .benefit-card h3 { margin: 8px 0 12px; font-size: 17px; }
 .benefit-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.62; }
 
-.journey-section { background: var(--white); color: var(--ink); }
+.journey-section { background: linear-gradient(145deg, var(--light-lavender) 0%, var(--light-lavender-deep) 100%); color: var(--ink); }
 .journey-grid { display: grid; grid-template-columns: 1.04fr .96fr; align-items: center; gap: 82px; }
 .journey-photo { position: relative; }
 .journey-photo::before { content: ""; position: absolute; inset: -18px 50% 38% -18px; z-index: -1; background: linear-gradient(135deg, rgba(149,0,255,.18), rgba(0,85,255,.08)); border-radius: 32px; }
+.journey-photo picture { display: block; }
 .journey-photo img { width: 100%; min-height: 610px; object-fit: cover; border-radius: 30px; box-shadow: 0 28px 70px rgba(22,19,34,.15); }
 .photo-badge { position: absolute; right: -22px; bottom: 35px; padding: 15px 20px; display: flex; align-items: center; gap: 9px; background: #fff; color: var(--ink); border-radius: 16px; box-shadow: 0 14px 42px rgba(22,19,34,.18); font-size: 13px; font-weight: 700; }
 .photo-badge svg { width: 24px; height: 24px; color: var(--purple); stroke-width: 2.3; }
@@ -135,7 +140,7 @@ h1 em, h2 em { font-style: normal; color: transparent; background: linear-gradie
 .country-cloud span:nth-child(5n+1), .country-cloud span:nth-child(7n) { border-color: rgba(181,50,255,.38); color: #e0b4ff; }
 .country-cloud span:hover { background: rgba(149,0,255,.13); border-color: rgba(181,50,255,.56); color: #fff; }
 
-.details-section { background: #f6f3f8; color: var(--ink); }
+.details-section { background: #c4bacd; color: var(--ink); }
 .details-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 100px; }
 .details-heading .eyebrow { color: rgba(22,19,34,.55); }
 .details-heading > p { color: rgba(22,19,34,.64); }
@@ -145,7 +150,7 @@ h1 em, h2 em { font-style: normal; color: transparent; background: linear-gradie
 .spec-list dd { margin: 0; font-size: 14px; font-weight: 600; }
 .spec-list code { padding: 5px 8px; background: #eae4ee; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
 
-.faq-section { background: var(--white); color: var(--ink); }
+.faq-section { background: var(--light-lavender-soft); color: var(--ink); }
 .faq-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 100px; }
 .faq-heading .eyebrow { color: rgba(22,19,34,.55); }
 .faq-heading > p { color: rgba(22,19,34,.64); }
@@ -218,9 +223,14 @@ h1 em, h2 em { font-style: normal; color: transparent; background: linear-gradie
   .section { padding: 74px 0; }
   .brand span { font-size: 12px; }
   .hero { padding-top: 80px; }
+  .hero-image { display: none; }
+  .hero-shade { background: linear-gradient(180deg, rgba(149,0,255,.08), transparent 22%), #050208; }
   .hero-grid { padding-top: 70px; padding-bottom: 80px; gap: 42px; }
   .hero h1 { font-size: clamp(54px, 18vw, 78px); }
   .hero-lead { font-size: 16px; }
+  .mobile-hero-visual { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; margin: 28px 0; overflow: hidden; border: 1px solid rgba(181,50,255,.38); border-radius: 26px; background: #11091c; box-shadow: 0 24px 70px rgba(149,0,255,.25); }
+  .mobile-hero-visual::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent 72%, rgba(5,2,8,.22)); }
+  .mobile-hero-visual img { width: 100%; height: 100%; object-fit: cover; }
   .hero-offer { align-items: flex-start; flex-direction: column; gap: 14px; }
   .hero-actions { align-items: stretch; flex-direction: column; gap: 12px; }
   .hero-actions .button { width: 100%; }
@@ -230,7 +240,7 @@ h1 em, h2 em { font-style: normal; color: transparent; background: linear-gradie
   .section-heading h2, .journey-copy h2, .coverage-copy h2, .details-heading h2, .faq-heading h2, .final-cta h2 { font-size: 42px; }
   .benefit-grid { grid-template-columns: 1fr; }
   .benefit-card { min-height: 285px; }
-  .journey-photo img { min-height: 400px; }
+  .journey-photo img { min-height: 0; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
   .photo-badge { right: 12px; bottom: 12px; }
   .spec-list div { grid-template-columns: 1fr; gap: 7px; }
   .footer-grid { grid-template-columns: 1fr; }

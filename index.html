@@ -53,6 +53,10 @@
           <h1 id="hero-title">Europe.<br><em>400 GB.</em><br>One eSIM.</h1>
           <p class="hero-lead">Serious data for serious travel. Stay connected across supported European destinations for 30 days — without swapping SIM cards or hunting for Wi-Fi.</p>
 
+          <div class="mobile-hero-visual" aria-hidden="true">
+            <img src="assets/europe-esim-hero-mobile.webp" width="900" height="1125" alt="">
+          </div>
+
           <div class="hero-offer" role="group" aria-label="Plan price">
             <div>
               <span class="price"><sup>$</sup>50</span>
@@ -147,7 +151,10 @@
     <section id="how-it-works" class="section journey-section">
       <div class="container journey-grid">
         <div class="journey-photo reveal">
-          <img src="assets/travelers-europe.webp" width="1400" height="933" loading="lazy" alt="Travelers using their phone at a European café">
+          <picture>
+            <source media="(max-width: 560px)" srcset="assets/travelers-europe-mobile.webp">
+            <img src="assets/travelers-europe.webp" width="1400" height="933" loading="lazy" alt="Travelers using their phone at a European café">
+          </picture>
           <div class="photo-badge">
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7.5"/></svg>
             QR activation

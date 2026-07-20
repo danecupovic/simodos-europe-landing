@@ -9,6 +9,8 @@ Responsive standalone landing page for the Europe 400 GB / 30 days / $50 promoti
 - `script.js` — mobile menu, FAQ accordion and subtle reveal effects
 - `assets/` — optimized logo and original generated images
 
+Desktop and mobile layouts use separate image compositions so the travelers, phones and luggage remain visible on narrow screens.
+
 ## Publish
 
 Upload the complete folder to the desired public directory on the Simodos website. Keep the file and folder names unchanged so the asset paths continue to work.
