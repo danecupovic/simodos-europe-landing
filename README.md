@@ -1,6 +1,6 @@
 # Simodos Europe eSIM landing page
 
-Responsive standalone landing page for the Europe 400 GB / 30 days / $50 promotion.
+Responsive standalone landing page for the Europe 400 GB / 30 days / $49 promotion.
 
 ## Files
 
